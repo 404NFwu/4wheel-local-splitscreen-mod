@@ -1,2 +1,35 @@
-# 4wheel-local-splitscreen-mod
-轮椅模拟器本地分屏mod / 4Wheel Local Split-Screen Mod — 3–4 Xbox controllers on one PC. Steam launches stay vanilla.
+# 轮椅模拟器本地分屏mod
+
+**4Wheel Local Split-Screen Mod · v0.3.1**
+
+一台电脑、一个屏幕，连接 3–4 个 Xbox 手柄一起玩。需要已购买并安装 Steam 正版《轮椅模拟器》。
+
+## 怎么开始
+
+1. **[点这里下载](https://github.com/404NFwu/4wheel-local-splitscreen-mod/releases/download/v0.3.1/4Wheel-Local-SplitScreen-v0.3.1.zip)**，下载后右键“全部解压”。不要下载 `Source code`。
+2. 把解压后的整个文件夹放在桌面，或者游戏文件夹里。**不要只拿走启动文件。**
+3. 打开 Steam，连接手柄，双击 **启动本地分屏.cmd**。第一次需要联网准备，请等游戏打开。
+4. 游戏里选 **联机 → 创建私人房间 → 开始游戏**。进入关卡后，其他玩家就会出现。
+
+**3 人玩：进关卡后按键盘 F7。4 人玩：保持默认即可。**
+
+想玩原版：关闭游戏，从 Steam 正常启动。想玩分屏：双击本启动器。
+
+## 常用按键
+
+| 按键 | 功能 |
+| --- | --- |
+| RT / LT、左摇杆 | 前进 / 后退、转向 |
+| 右摇杆 | 转动镜头 |
+| 方向键上 / 下 | 拉近 / 拉远镜头 |
+| 长按 Y | 自己复活 |
+| 方向键左 / 右 | 切换武器 |
+| 按住 LB，再按 RB | 瞄准，再发射 / 扔 C4 |
+
+选中 PUSH 时，LB / RB 是推人。C4 扔出后靠近会触发，不用再按引爆键。
+
+找不到游戏时，按启动器提示选择 `4Wheel Challenge.exe`。启动器文件请放在同一个文件夹里。首次使用需要空出一份游戏的磁盘空间。
+
+这是实验版，主要用于本机 3–4 人的“10 关”模式。暂不支持其他电脑加入同一个房间。游戏更新后可能需要新版 mod。
+
+[开发与兼容说明](docs/DEVELOPMENT.md) · [第三方组件](THIRD-PARTY-NOTICES.md)

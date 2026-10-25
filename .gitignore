@@ -1,0 +1,21 @@
+# Build products and private/local data never belong in the source repository.
+**/bin/
+**/obj/
+payload/
+dist/
+*.zip
+*.pdb
+*.log
+.env
+.env.*
+*.user
+*.suo
+.vs/
+runtime-test/
+BepInEx/
+Game/
+analysis/
+backups/
+tools/
+*-profile/
+*.dmp

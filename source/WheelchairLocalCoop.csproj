@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>WheelchairLocalCoop</AssemblyName>
+    <Version>0.3.1</Version>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <NoWarn>NETSDK1138;CS8632</NoWarn>
+    <GameDirectory Condition="'$(GameDirectory)' == ''">$(LOCALAPPDATA)\4WheelLocalSplitScreenMod\Game</GameDirectory>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildProjectDirectory)=/_/source</PathMap>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(GameDirectory)\BepInEx\core\*.dll" Exclude="$(GameDirectory)\BepInEx\core\dobby.dll"><Private>false</Private></Reference>
+    <Reference Include="$(GameDirectory)\BepInEx\interop\*.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GameDirectory)\BepInEx\core\BepInEx.Unity.IL2CPP.dll')"
+           Text="GameDirectory must contain the installed BepInEx IL2CPP core. Pass -p:GameDirectory=your-game-directory or use scripts/Build-Mod.ps1." />
+    <Error Condition="!Exists('$(GameDirectory)\BepInEx\interop\Assembly-CSharp.dll')"
+           Text="GameDirectory must contain BepInEx-generated interop assemblies from your own game. Launch the game once with BepInEx before building." />
+  </Target>
+</Project>
